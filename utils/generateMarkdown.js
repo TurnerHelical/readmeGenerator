@@ -1,7 +1,41 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
-
+function renderLicenseBadge(answer) { 
+  const licenseInput = answer.license
+ // if string = MIT License then add MIT badge
+    if (licenseInput === 'MIT License') {
+      let badgeLink = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+      return badgeLink
+    }
+    // if string = Apache License 2.0 then add Apache License 2.0 badge
+    else if (licenseInput === 'Apache License 2.0') {
+      let badgeLink = `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
+      return badgeLink
+    }
+    // if string = GNU General Public License (GPL) v3 then add GNU General Public License (GPL) v3 badge
+    else if (licenseInput === 'GNU General Public License (GPL) v3') {
+      let badgeLink = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
+      return badgeLink
+    }
+    // if string = Mozilla Public License 2.0 then add Mozilla Public License 2.0 badge
+    else if (licenseInput === 'Mozilla Public License 2.0') {
+      let badgeLink = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`
+      return badgeLink
+    }
+    // if string = BSD 3-Clause License then add BSD 3-Clause License badge
+    else if (licenseInput === 'BSD 3-Clause License') {
+      let badgeLink = `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`
+      return badgeLink
+    }
+    else if (licenseInput = '') {
+      let badgeLink = ''
+      return badgeLink
+    }
+  } 
+ 
+ 
+ 
+ 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) { }
@@ -12,10 +46,12 @@ function renderLicenseSection(license) { }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answer) {
+  let badgeLink = renderLicenseBadge(answer)
   const readMe = `
   # ${answer.title}
   ## Description
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ${badgeLink} <br />
+
   ${answer.description}
   ## Table Of Content
   *[Title](#title)
@@ -51,3 +87,4 @@ function generateMarkdown(answer) {
 }
 
 module.exports = generateMarkdown;
+
