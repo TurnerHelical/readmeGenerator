@@ -59,12 +59,13 @@ const questions =[
 ]
 // TODO: Create a function to write README file
 function writeToFile(answer) {
+    
+    const fileName = 'README.md'
 
-    const filename = 'REA.txt';
+    fs.writeFile(fileName, generateMarkdown(answer), (err) => {
+        err ? console.error(err) : console.log('Log created!')
+    });
 
-    fs.writeFile(filename, JSON.stringify(answer, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
 }
 
 // TODO: Create a function to initialize app
@@ -72,10 +73,11 @@ function init() {
     inquirer
         .prompt(questions)
   .then((answer) => {
-    
+    console.log(answer);
     writeToFile(answer)
   });
 }
 
 // Function call to initialize app
 init();
+
