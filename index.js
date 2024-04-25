@@ -37,6 +37,23 @@ const questions =[
             message: 'How can the user test your project?',
             name: 'test',
         },
+        {  
+             type: 'list',
+            message: 'What is the license used on this project?',
+            name: 'license',
+            choices: ["MIT License", "Apache License 2.0", "GNU General Public License (GPL) v3", "Mozilla Public License 2.0", "BSD 3-Clause License"],
+        },
+        {  
+             type: 'input',
+            message: 'What is your GitHub username?',
+            name: 'githubUser',
+        },
+        {  
+             type: 'input',
+            message: 'What your email address?',
+            name: 'email',
+        },
+        
 ]
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
