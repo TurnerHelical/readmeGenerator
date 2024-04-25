@@ -73,7 +73,6 @@ function init() {
     inquirer
         .prompt(questions)
   .then((answer) => {
-    console.log(answer);
     writeToFile(answer)
   });
 }
