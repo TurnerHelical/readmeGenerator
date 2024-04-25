@@ -32,5 +32,5 @@
   ## Tests
   Users can test this project by generating their own README files by running node index.js in a terminal.
   ## Questions
-  Any questions about this project please send me a message on https://github.com/Turner_Helical or email me at [hunterde91@gmail.com](mailto:hunterde91@gmail.com)  }
+  Any questions about this project please send me a message on https://github.com/TurnerHelical or email me at [hunterde91@gmail.com](mailto:hunterde91@gmail.com)  }
       

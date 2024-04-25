@@ -72,7 +72,7 @@ function generateMarkdown(answer) {
 
   ## Installation
   ${answer.installInstructions}
-  ## Usage?
+  ## Usage
   ${answer.usage}
   ## License
   This is covered under the ${answer.license} license.
