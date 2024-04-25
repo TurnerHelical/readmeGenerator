@@ -63,7 +63,7 @@ function writeToFile(answer) {
     const fileName = 'README.md'
 
     fs.writeFile(fileName, generateMarkdown(answer), (err) => {
-        err ? console.error(err) : console.log('Log created!')
+        err ? console.error(err) : console.log('README generated')
     });
 
 }
@@ -73,7 +73,6 @@ function init() {
     inquirer
         .prompt(questions)
   .then((answer) => {
-    console.log(answer);
     writeToFile(answer)
   });
 }
